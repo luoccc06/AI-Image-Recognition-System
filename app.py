@@ -173,7 +173,7 @@ CSS = """
 footer { display: none !important; }
 """
 
-with gr.Blocks(css=CSS, title="AI 智能图像识别与风格迁移系统", theme=gr.themes.Soft()) as app:
+with gr.Blocks(title="AI 智能图像识别与风格迁移系统") as app:
     gr.Markdown(
         """
         # 🧠 AI 智能图像识别与风格迁移系统
@@ -265,6 +265,7 @@ with gr.Blocks(css=CSS, title="AI 智能图像识别与风格迁移系统", them
     )
 
 if __name__ == "__main__":
-    print("🚀 正在启动 AI 智能图像识别与风格迁移系统...")
+    print("正在启动 AI 智能图像识别与风格迁移系统...")
     print("首次启动会自动下载模型，请耐心等待。")
-    app.launch(share=False, inbrowser=True)
+    app.launch(share=False, inbrowser=True, css=CSS, theme=gr.themes.Soft())
+
